@@ -1,0 +1,98 @@
+
+<style>
+    .main-log{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 50px;
+    }
+    .login{
+        background-color: #3abdc1;
+        width: 330px;
+    }
+    .login-name h1{
+            font-size: 28px;
+        text-align: center;
+        color: #fff;
+        background-color: #23A9AF;
+        padding: 10px 0;
+    }
+    .login-hed{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 24px;
+    }
+    .login-content{
+        padding: 30px;
+        margin-left: 15px;
+    }
+    .login-sub{
+        color: #fff;
+        font-size: 14px;
+    }
+    .form{
+        margin-top: 20px;
+    }
+    .input-name,
+    .input-pass,
+    .input-email{
+        width: 240px;
+        height: 50px;
+        padding: 0 24px;
+        background-color: rgba(255, 255, 255, .25);
+        color: #fff;
+        border: none;
+        
+    }
+    .input-pass,
+    .input-email{
+        margin-top: 5px;
+    }
+    .check{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .lost-pass{
+        color: #26878A;
+        margin-top: 5px;
+        display: block;
+    }
+    .btn-login{
+        width: 240px;
+        height: 50px;
+        border: none;
+        font-weight: 600;
+    }
+    .btn-login:hover{
+        background-color: #23A9AF;
+        color: #fff;
+    }
+    input::placeholder{
+   color:white;
+    }
+    input:focus {
+   outline: none;
+    }
+</style>
+
+<div class="main-log">
+<div class="login">
+    <div class="login-name">
+        <h1>ĐĂNG KÝ</h1>
+    </div>
+    <div class="login-content">
+    <h3 class="login-hed">Đăng ký ngay bây !</h3>
+    <span class="login-sub">Tham gia cộng đồng ngay hôm nay và thiết lập tài khoản miễn phí</span>
+    <form action="/auth/register" method="post" class="form">
+          <input type="text" placeholder="Name" required class="input-name" id="name" name="name"><br>
+          <input type="text" placeholder="Email" required class="input-email" id="email" name="email"><br>
+          <input type="password" placeholder="Password" required  class="input-pass" id="password" name="password">
+          <div class="check">
+          <span>Dữ liệu cá nhân của bạn sẽ được sử dụng để hỗ trợ trải nghiệm của bạn trên toàn bộ trang web này, để quản lý quyền truy cập vào tài khoản của bạn và cho các mục đích khác được mô tả trong phần của chúng tôi.</span>
+          </div> <br>
+          <button class="btn-login" type="submit">REGISTER</button>
+    </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,32 @@
+<style>
+    .btn-submit{
+        background-color: #3fd0d4;
+        color: #fff;
+    }
+    .btn-submit:hover{
+        background-color: #00a5ab;
+        color: #fff;
+    }
+</style>
+<div class="container mt-3">
+    <h3>Thêm bài viết</h3>
+    <form action="/posts/store" method="post">
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" >
+        </div>
+        <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <input type="text" class="form-control" id="content" name="content" >
+        </div>
+        <div class="mb-3">
+        <label for="author" class="form-label">Author</label>
+        <input type="text" class="form-control" id="author" name="author" > 
+        </div>
+        <div class="mb-3">
+        <label for="author" class="form-label">Image</label>
+        <input type="text" class="form-control" id="image" name="image" >
+        </div>
+        <button class="btn btn-submit" type="submit">Thêm</button>
+    </form>
+</div>

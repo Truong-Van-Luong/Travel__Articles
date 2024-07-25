@@ -1,0 +1,96 @@
+
+<style>
+    .main-log{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 50px;
+    }
+    .login{
+        background-color: #3abdc1;
+        width: 330px;
+    }
+    .login-name h1{
+        font-size: 28px;
+        text-align: center;
+        color: #fff;
+        background-color: #23A9AF;
+        padding: 10px 0;
+    }
+    .login-hed{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 24px;
+    }
+    .login-content{
+        padding: 30px;
+        margin-left: 15px;
+    }
+    .login-sub{
+        color: #fff;
+           font-size: 14px;
+    }
+    .form{
+        margin-top: 20px;
+    }
+    .input-name,
+    .input-pass{
+        width: 240px;
+        height: 50px;
+        padding: 0 24px;
+        background-color: rgba(255, 255, 255, .25);
+        color: #fff;
+        border: none;
+        
+    }
+    .input-pass{
+        margin-top: 5px;
+    }
+    .check{
+        margin-top: 10px;
+        color: #fff;
+    }
+    .lost-pass{
+        color: #26878A;
+        margin-top: 5px;
+        display: block;
+    }
+    .btn-login{
+        width: 240px;
+        height: 50px;
+        border: none;
+        font-weight: 600;
+    }
+    .btn-login:hover{
+        background-color: #23A9AF;
+        color: #fff;
+    }
+       input::placeholder{
+   color:white;
+    }
+    input:focus {
+   outline: none;
+    }
+</style>
+
+<div class="main-log">
+<div class="login">
+    <div class="login-name">
+        <h1>ĐĂNG NHẬP</h1>
+    </div>
+    <div class="login-content">
+    <h3 class="login-hed">Đăng nhập tại đây!</h3>
+    <span class="login-sub">Đăng nhập vào tài khoản của bạn chỉ bằng vài bước đơn giản</span>
+    <form action="/auth/login" method="post" class="form">
+          <input type="text" placeholder="Email" required class="input-name" id="email" name="email"><br>
+          <input type="password" placeholder="Password" required  class="input-pass" id="password" name="password">
+          <div class="check">
+          <input type="checkbox" name="" id="">
+          <span>Nhớ tôi</span>
+          </div>
+          <span class="lost-pass">Quên mật khẩu</span><br>
+          <button class="btn-login" type="submit">ĐĂNG NHẬP</button>
+    </form>
+    </div>
+</div>
+</div>

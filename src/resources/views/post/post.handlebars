@@ -1,0 +1,141 @@
+<style>
+      .plan{
+        margin-top: 100px;
+        background-color: #f8f8f8;
+    }
+    .plan-main{
+        
+    }
+    .plan-name{
+        text-align: center;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .planthe{
+        font-family: Satisfy, cursive;
+        color: #3fd0d4;
+        font-size: 24px;
+    }
+    .plan-hed{
+        font-weight: 700;
+        margin-top: 5px;
+        font-size: 56px;
+    }
+    .plan-sub{
+        color: #505050;
+        font-size: 16px;
+        margin-top: 10px;
+        display: block;
+    }
+    .plan-tour{
+        margin-top: 100px;  
+        display: flex;  
+        flex-wrap: wrap;
+
+    }
+    .plan-tour-main{
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 5px 8px 13.92px 2.08px rgba(0,0,0,.05);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin: 20px 10px 0 10px;
+    }
+    .plan-tour-main-img{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 300px;
+        height: 180px;
+    }
+    .plan-tour-main-title{
+        padding: 25px 30px;
+    }
+    .plan-tour-main-hed{
+        margin: 0;
+        font-weight: 700;
+    }
+    .plan-tour-main-sub{
+        margin-top: 15px;
+        display: block;
+        color: #505050;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        
+    }
+    .plan-tour-main-action{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 12px;
+    }
+    .plan-tour-main-action-link{
+        text-decoration: none;
+        margin-right: 10px;
+        color: #3fd0d4;
+    }
+     .bar{
+        height: 40px;
+        width: 300px;
+        background-color: #3fd0d4;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding:0 12px;
+        font-weight: 600;
+    }
+    
+
+    
+</style>
+
+
+
+
+  <div class="plan">
+        <div class="plan-main container">
+        <div class="plan-name">
+        <span class="planthe">Lập Kế Hoạch</span>
+        <h1 class="plan-hed">Kì nghỉ Hoàn Hảo</h1>
+        <span class="plan-sub">Điều quan trọng là phải có một dịch vụ khách hàng tốt, một nhà cung cấp dịch vụ khách hàng. Đó có phải là một điều tốt mà nỗi đau cần? Khối hoa nhài. Với các đối tác</span>
+        </div>
+        <div class="plan-tour">
+  {{#each posts}}
+            <div class="plan-tour-main">
+                <img src="{{image}}" alt="" class="plan-tour-main-img" >
+                <div class="bar">
+                    <div class="bar-calendar">
+                        <i class="calendar-icon"></i>
+                        <span class="calendar-tilte">1</span>
+                    </div>
+                       <div class="bar-people">
+                        <i class="calendar-icon"></i>
+                        <span class="calendar-tilte">13+</span>
+                    </div>
+                       <div class="bar-address">
+                        <i class="calendar-icon"></i>
+                        <span class="calendar-tilte">skiing</span>
+                    </div>
+                </div>
+                <div class="plan-tour-main-title">
+                <h3 class="plan-tour-main-hed">{{title}}</h3>
+                <span class="plan-tour-main-sub">{{content}} </span>
+                <div class="plan-tour-main-action">
+                    <a href="/posts/{{_id}}" class="plan-tour-main-action-price plan-tour-main-action-link">Xem thêm...</a>
+                    <span class="plan-tour-main-action-price">{{author}}</span>
+                </div>
+                </div>
+            </div> 
+    {{/each}}      
+         
+         
+            
+        </div>
+        
+
+        </div>
+     </div>

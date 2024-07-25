@@ -1,0 +1,95 @@
+<style>
+      .blog{
+        margin-top: 100px;
+        display: flex;
+    }
+    .blog-main{
+        margin-right: 80px;
+    }
+    .blog-hed{
+        font-size: 46px;
+        font-weight: 700;
+    }
+    .blog-sub{
+        font-size: 18px;
+        color: #505050;
+        margin-top: 10px;
+        display: block;
+    }
+    .blog-list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 70px;
+    }
+    .blog-item{
+        display: flex;
+    }
+    .blog-item-img{
+        width: 340px;
+        height: 340px;
+    }
+    .blog-item-title{
+        padding: 0 28px;
+    }
+    .blog-item-hed{
+        font-weight: 700;
+        text-decoration: none;
+        color: #000;
+        font-size: 32px;
+    }
+    .blog-item-hed:hover{
+        color: #3fd0d4;
+    }
+    .blog-item-sub{
+        color: #505050;
+        margin-top: 15px;
+        display: block;
+        font-size: 16px;
+    }
+    .blog-item-action{
+        margin-top: 30px;
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .blog-item-action-year{
+        padding-right: 40px;
+    }
+    .blog-sale{
+        margin-top: 40px;
+
+    }
+    .blog-sale-img{
+        width: 380px;
+        height: 480px;
+    }
+</style>
+
+   <div class="blog container">
+        <div class="blog-main">
+        <h2 class="blog-hed">Blog của chúng tôi</h2>
+        <span class="blog-sub">Điều quan trọng là phải có một dịch vụ khách hàng tốt, một nhà cung cấp dịch vụ khách hàng. Đó có phải là một điều tốt mà nỗi đau cần? Khối hoa nhài. Với các đối tác</span>
+        <ul class="blog-list">
+            <li class="blog-item">
+                <img class="blog-item-img" src="{{post.image}}" alt="">
+                <div class="blog-item-title">
+                <a href="" class="blog-item-hed">{{post.title}}</a>
+                <span class="blog-item-sub">{{post.content}}</span>
+                <div class="blog-item-action">
+                    <span class="blog-item-action-year">{{post.author}}</span>
+                    <div class="blog-item-action-cmt">
+                        <i class="blog-item-action-cmt-icon"></i>
+                        <span class="blog-item-action-cmt-span">Bình luận</span>
+                    </div>
+                </div>
+                </div>
+            </li>
+        </ul>
+  
+        </div>
+        <div class="blog-sale">
+            <img class="blog-sale-img" src="	https://setsail.qodeinteractive.com/wp-content/uploads/2018/09/h1-banner-img-1.jpg" alt="">
+        </div>
+     </div>
+ 

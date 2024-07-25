@@ -1,0 +1,554 @@
+<style>
+      /* header */
+.header {
+    height: 170px;
+    background-image: linear-gradient(#15161D, #15161D,#1E1F29);
+    border-bottom: 3px solid #3fd0d4;
+}
+.header-sub{
+    margin: 0 auto;
+}
+
+/* navbar */
+.navbar{
+    /* background-color: #1E1F29; */
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+
+}
+.navbar__list-support{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.navbar-item{
+
+}
+.navbar-link{
+    color: #fff;
+    font-size: 12px;
+    margin: 0 8px;
+    text-decoration: none;
+}
+.navbar-link:hover{
+    color: #3fd0d4;
+}
+
+.navbar-item-icon{
+    color: #3fd0d4;
+}
+
+.navbar-item-title{
+    margin-left: 6px;
+}
+
+.navbar__list-user{
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+/* header main */
+.header-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* header search */
+
+.header-search {
+    padding: 15px 0px;
+  }
+  .logo{
+    padding: 10px;
+    text-align: center;
+    color: #3fd0d4;
+}
+.text-white{
+    color: white;
+}
+  .header-search form {
+    position: relative;
+  }
+  
+  .header-search form .input-select {
+    height: 40px;
+    width: 150px;
+    margin-right: -4px;
+    border-radius: 40px 0px 0px 40px;
+    padding-left: 12px;
+    line-height: 40px;
+  }
+  
+  .header-search form .input {
+    height: 40px;
+    width: 350px;
+    margin-right: -4px;
+    padding-left: 12px;
+    line-height: 40px;
+  }
+  
+  .header-search form .search-btn {
+    height: 40px;
+    width: 100px;
+    background: #3fd0d4;
+    color: #FFF;
+    font-weight: 700;
+    border: none;
+    border-radius: 0px 40px 40px 0px;
+    line-height: 40px;
+  }
+
+  /* header cart */
+
+  .header__cart{
+    cursor: pointer;
+    position: relative;
+    margin: 0 40px;
+    margin-top: 28px;
+    -webkit-tap-highlight-color: transparent;
+}
+.header__cart-icon{
+    font-size: 18px;
+    color: #FFF;
+}
+
+.header__cart-list{
+    position: absolute;
+    top: 60%;
+    right: -20px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    text-align: center;
+    animation: loaddelay ease-in 0.1s;
+    cursor: default;
+    z-index: 1;
+}
+/* .header__cart-list::after{
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    top: -29px;
+    right: 10px;
+    border-width: 20px 20px;
+    border-style:solid ;
+    border-color: transparent transparent #fff transparent;
+} */
+.header__cart-items-nocart{
+    padding: 18px 0;
+}
+.header__cart-items-nocart-img{
+    width: 150px;
+    
+}
+.header__cart-items-nocart-span{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin: 8px 0;
+}
+.header__cart:hover .header__cart-list{
+    display: block;
+    
+}
+.header__cart-noti{
+    position: absolute;
+    border-radius: 10px;
+    background-color: #3fd0d4;
+    color: #fff;
+    font-weight: 400;
+    padding: 1px 7px;
+    line-height: 14px;
+    font-size: 12px;
+    top: -16px;
+    right: -13px;
+    border: 1px solid #3fd0d4;
+}
+.header__cart-has-cart{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+.header__cart-has-cart-heading{
+   margin: 12px ;
+   font-size: 14px;
+   color: #9c9a9a;
+   
+}
+.header__cart-has-cart-list{
+    margin: 0 ;
+    padding: 0;
+    list-style: none;
+    max-height: 56vh;
+    overflow-y: auto;
+}
+.header__cart-has-cart-items{
+    padding: 12px 12px;
+    display: flex;
+    align-items: center;
+    
+}
+.header__cart-has-cart-items:hover{
+    background-color: #f0f0f0;
+}
+.header__cart-has-cart-items-img{
+   width: 40px;
+   height: 40px;
+   border: 1px solid #bfbfbf;
+} 
+.header__cart-has-cart-info{
+   width: 100%;
+   margin: 0 0 0 12px;
+   
+}
+.header__cart-has-cart-items-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header__cart-has-cart-items-head-name{
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    padding-right: 4px;
+    line-height: 20px;
+    max-height: 40px;
+    flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
+}
+.header__cart-has-cart-items-head-price{
+    color: #3fd0d4;
+    font-size: 14px;
+    font-weight: 600;
+}
+.header__cart-has-cart-items-head-x{
+    padding: 0 8px;
+    color: #535353;
+    font-size: 13px;
+}
+
+.header__cart-has-cart-items-head-qnt{
+    color: #535353;
+    font-size: 14px;
+}
+.header__cart-has-cart-items-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.header__cart-has-cart-items-head-phanloai{
+    font-size: 13px;
+    color: #535353;
+}
+.header__cart-has-cart-items-head-delete{
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+}
+.header__cart-has-cart-items-head-delete:hover{
+    color: #3fd0d4;
+    cursor: pointer;
+}
+.header__cart-btn{
+    margin-top: 12px;
+    display: flex;
+}
+.header__cart-btn-primary{
+     border: none;
+     width: 200px;
+     height: 44px;
+}
+.header__cart-btn-primary a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.header__cart-btn-primary:hover{
+    opacity: 0.8;
+}
+.header__cart-btn-view{
+    background-color: #000;
+    border-bottom-left-radius: 3px;
+}
+.header__cart-btn-check{
+    background-color: #3fd0d4;
+    border-bottom-right-radius: 3px;
+
+}
+/* header menu */
+.header__heading{
+    border-bottom: rgb(204, 200, 200) 1px solid;
+}
+
+.header__list-menu{
+    list-style: none;
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.header__item-menu{
+    padding: 0 18px;
+    
+}
+.header__item-menu-trangchu{
+    padding-left: 0;
+}
+.header__link-menu{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.header__link-menu:hover{
+    color: #3fd0d4;
+}
+    .btn-submit{
+        background-color: #3fd0d4;
+        color: #fff;
+    }
+    .btn-submit:hover{
+        background-color: #00a5ab;
+        color: #fff;
+    }
+
+    .auth-list{
+      padding: 0;
+    }
+    .auth-item:hover{
+        background-color: #3fd0d4;
+        color: #fff;
+    }
+    .auth-item-border-top{
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+      .auth-item-border-bottom{
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+
+
+ 
+</style>
+    <header class="header">
+      <div class="col col-xl-9 header-sub">
+        <!-- navbar header -->
+        <nav class="navbar">
+          <ul class="navbar__list-support">
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                <i class="fa-solid fa-phone navbar-item-icon"></i>
+                <span class="navbar-item-title">+0357325956</span>
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                <i class="fa-regular fa-envelope navbar-item-icon"></i>
+                <span class="navbar-item-title">luongtvpd@gmail.com</span>
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                <i class="fa-solid fa-location-dot navbar-item-icon"></i>
+                <span class="navbar-item-title">79 Tôn Đản</span>
+              </li>
+              </a>
+          </ul>
+          <ul class="navbar__list-user">
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                <i class="fa-solid fa-comments-dollar navbar-item-icon"></i>
+                <span class="navbar-item-title">Hỗ trợ</span>
+              </a>
+            </li>
+            <li class="navbar-item dropdown">
+              <a href="#" type="button" class="navbar-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user navbar-item-icon"></i>
+                <span class="navbar-item-title">Tài khoản</span>        
+              </a>
+                      <ul class="dropdown-menu auth-list">
+                        <li><a class="dropdown-item auth-item auth-item-border-top" href="/user/register">Đăng ký</a></li>
+                        <li><a class="dropdown-item auth-item" href="/user/login">Đăng nhập</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item auth-item auth-item-border-bottom"  id="btn-logout">Đăng xuất</a></li>
+                      </ul>
+            </li>
+          </ul>
+        </nav>
+
+        {{!-- method post logout --}}
+        <form name="logout-form" action="/auth/logout" method="post"></form>
+
+        <!-- Header Search -->
+
+        <div class="header-main">
+          <div class="header__main-logo">
+            <div class="logo"><h1 class="text-center"><span>TVL</span><span class="text-white">POST</span></h1></div>
+        </div>
+
+        <div class="header-search">
+            <form>
+              <select class="input-select">
+                <option value="0">Danh mục</option>
+                <option value="1">Danh mục 01</option>
+                <option value="2">Danh mục 02</option>
+              </select>
+              <input class="input" placeholder="Tìm kiếm tại đây">
+              <button class="search-btn">Tìm kiếm</button>
+            </form>
+        </div>
+   
+        <a href="" class="header__cart">
+          <i class="fa-solid fa-cart-shopping header__cart-icon"></i>
+          <span class="header__cart-noti">0</span>
+          <div class="header__cart-list">
+              <!-- <div class="header__cart-items-nocart">
+                  <img src="	https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/9bdd8040b334d31946f49e36beaf32db.png" alt="" class="header__cart-items-nocart-img"> 
+                  <span class="header__cart-items-nocart-span">Chưa có sản phẩm</span>
+              </div> -->
+              <!-- <div class="header__cart-has-cart">
+                  <h3 class="header__cart-has-cart-heading">
+                       Sản phẩm của bạn
+                  </h3>
+                  <ul class="header__cart-has-cart-list">
+                      <li class="header__cart-has-cart-items">
+                         <img src="" alt="" class="header__cart-has-cart-items-img">
+                         <div class="header__cart-has-cart-info">
+                             <div class="header__cart-has-cart-items-head">
+                                 <span class="header__cart-has-cart-items-head-name">
+                                  Bộ laptop  mới nhất 
+                                 </span>
+                                 <span class="header__cart-has-cart-items-head-price">
+                                  2.000.000đ
+                                 </span>
+                                 <span class="header__cart-has-cart-items-head-x">
+                                  x
+                                 </span>
+                                 <span class="header__cart-has-cart-items-head-qnt">
+                                  1
+                                 </span>
+                             </div>
+                             <div class="header__cart-has-cart-items-bottom">
+                              <span class="header__cart-has-cart-items-head-phanloai">
+                               Phân loại hàng: Bạc
+                              </span>
+                              <span class="header__cart-has-cart-items-head-delete">
+                               Xóa
+                              </span>
+                          </div>
+                         </div>
+                      </li>
+                      <li class="header__cart-has-cart-items">
+                          <img src="" alt="" class="header__cart-has-cart-items-img">
+                          <div class="header__cart-has-cart-info">
+                              <div class="header__cart-has-cart-items-head">
+                                  <span class="header__cart-has-cart-items-head-name">
+                                   Bộ laptop  mới nhất 
+                                  </span>
+                                  <span class="header__cart-has-cart-items-head-price">
+                                   2.000.000đ
+                                  </span>
+                                  <span class="header__cart-has-cart-items-head-x">
+                                   x
+                                  </span>
+                                  <span class="header__cart-has-cart-items-head-qnt">
+                                   1
+                                  </span>
+                              </div>
+                              <div class="header__cart-has-cart-items-bottom">
+                               <span class="header__cart-has-cart-items-head-phanloai">
+                                Phân loại hàng: Bạc
+                               </span>
+                               <span class="header__cart-has-cart-items-head-delete">
+                                Xóa
+                               </span>
+                           </div>
+                          </div>
+                       </li>
+
+
+
+                  </ul>
+                  <div class="header__cart-btn">
+                    <button class="header__cart-btn-primary header__cart-btn-view"><a href="">Xem giỏ hàng</a></button>
+                    <button class="header__cart-btn-primary header__cart-btn-check"><a href="">Thanh toán</a></button>
+                  </div>
+              </div> -->
+          </div>
+          </a>
+
+
+        </div>
+        
+        
+
+      </div>
+
+  </header>
+  <!-- header menu -->
+  <div class="header__heading ">
+     <div class="col col-xl-9 container">
+       <ul class="header__list-menu ">
+         <li class="header__item-menu header__item-menu-trangchu">
+           <a href="/" class="header__link-menu">Trang chủ</a>
+         </li>
+         <li class="header__item-menu">
+           <a href="/posts/create" class="header__link-menu">New Post</a>
+         </li>
+         <li class="header__item-menu">
+           <a href="/posts" class="header__link-menu">Post</a>
+         </li>
+           <li class="header__item-menu">
+           <a href="/about" class="header__link-menu">About</a>
+         </li>
+          <li class="header__item-menu">
+           <a href="/me/stored/posts" class="header__link-menu">Meeeeee</a>
+         </li>
+      
+       </ul>
+
+     </div>
+  </div>
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function(){
+        var logoutForm = document.forms['logout-form'];
+        var btnLogout = document.getElementById('btn-logout');
+        
+        btnLogout.addEventListener('click', function() {
+            logoutForm.submit();
+        })
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
