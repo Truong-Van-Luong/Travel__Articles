@@ -4,7 +4,6 @@ const uri = "mongodb+srv://luongtvpd08420:v7H4CzqQ16VSVLW5@cluster0.w65zti4.mong
 class Connection {
 
   constructor() {
-    // Init a MongoClient with a MongoClientOptions object to set the Stable API version
     this.client = new MongoClient(uri, {
       serverApi: {
         version: ServerApiVersion.v1,
@@ -16,15 +15,11 @@ class Connection {
 
   async connect() {
     try {
-      // Connect the client to the server
       console.log("Connecting to MongoDB...");
       await this.client.connect();
       
-      // Test connection
-      // await client.db("fpldb").command({ ping: 1 });
       console.log("Pinged your deployment. You successfully connected to MongoDB!");
-
-      // Return the database
+      
       return await this.client.db("posts");
     } catch (e) {
       console.error(e);
